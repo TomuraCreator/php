@@ -17,13 +17,21 @@
             </li>
         </ul>
     <ul>
-            <li>Занятие 1.2. Работа с формами и строками
-                <ul>
-                    <li><a href="1.2-strings-and-forms/1.2.1-registration/form.html">Задание 1.2.1</a></li>
-                    <li><a href="1.2-strings-and-forms/1.2.2-name-standart/form.html">Задание 1.2.2</a></li>
-                </ul>
-            </li>
-        </ul>
+        <li>Занятие 1.2. Работа с формами и строками
+            <ul>
+                <li><a href="1.2-strings-and-forms/1.2.1-registration/form.html">Задание 1.2.1</a></li>
+                <li><a href="1.2-strings-and-forms/1.2.2-name-standart/form.html">Задание 1.2.2</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>Занятие 1.3. Массивы и циклы
+            <ul>
+                <li><a href="1.3-arrays-and-functions/1-places/">Задание 1.3.1</a></li>
+                <li><a href="1.3-arrays-and-functions/2-search/">Задание 1.3.2</a></li>
+            </ul>
+        </li>
+    </ul>
 </ul>
 </body>
 </html>
