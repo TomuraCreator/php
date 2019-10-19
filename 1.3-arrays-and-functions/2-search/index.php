@@ -16,7 +16,6 @@
     } 
     
     function reserveCompany($count, $arr) {
-        
         for($i = 1; $i <= count($arr); $i++) {
             $freeSeatCount = 0;
             if((count($arr[$i]) - ($count + 1)) >= 0):   
@@ -35,11 +34,8 @@
                     endif;
                 }
             endif;
-            
-            
         }
     }
-    var_dump($map);
     reserveCompany(4, $map);
 
     
