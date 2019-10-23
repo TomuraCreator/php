@@ -18,25 +18,29 @@
     function reserveCompany($count, $arr) {
         for($i = 1; $i <= count($arr); $i++) {
             $freeSeatCount = 0;
+            $arr_seat = [];
             if((count($arr[$i]) - ($count + 1)) >= 0):   
                 for($k = 0; $k < count($arr[$i]); $k++) {
                     if($arr[$i][$k] === false): 
                        $freeSeatCount++;
+                       $arr_seat[] = $k;
                     else:
                        $freeSeatCount = 0;
+                       $arr_seat = [];
                     endif;
                     if($freeSeatCount >= $count):
-                        echo "Свободные места есть в $i ряду";
-                        exit;
+                        return [
+                            "row" => $i,
+                            "place" => $arr_seat
+                        ];
                     elseif($i === count($arr)): 
-                        echo "Свободных мест нет";
-                        exit;
+                        return FALSE;
                     endif;
                 }
             endif;
         }
     }
-    reserveCompany(4, $map);
+ reserveCompany(4, $map);
 
     
 
