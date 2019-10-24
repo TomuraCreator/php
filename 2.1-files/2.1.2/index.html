@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        input {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="files.php" enctype="multipart/form-data" method="post">
+        <input type="file" name="file[]">
+        <input type="file" name="file[]">
+        <input type="file" name="file[]">
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
