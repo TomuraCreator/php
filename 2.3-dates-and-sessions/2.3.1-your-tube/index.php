@@ -29,15 +29,20 @@
      */
     function shouldBeIncremented()
     {
-        session_start();
-        $count = $_SESSION['count'];
-        if(!isset($count)) {
-            $_SESSION['count'] = time();
-        } elseif((time() - $count) > 300) {
-            $_SESSION['count'] = time();
-            incrementViews(getViews());
+        $expire = 300;
+        
+        $timer = $_COOKIE['timer'];
+        if( !isset($timer)) {
+            setcookie('timer', time(), time()+$expire);
         }
+
+        if(( time() - $timer ) > 300) {
+            setcookie('timer', time(), time()+300);
+            incrementViews(getViews());
+        } 
+        
     }
+    
     shouldBeIncremented();
 ?>
 
