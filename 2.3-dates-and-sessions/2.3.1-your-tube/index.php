@@ -27,12 +27,18 @@
      *
      * @return bool
      */
-    function shouldBeIncremented(): bool
+    function shouldBeIncremented()
     {
-        //write your code here
+        session_start();
+        $count = $_SESSION['count'];
+        if(!isset($count)) {
+            $_SESSION['count'] = time();
+        } elseif((time() - $count) > 300) {
+            $_SESSION['count'] = time();
+            incrementViews(getViews());
+        }
     }
-
-    //
+    shouldBeIncremented();
 ?>
 
 <!DOCTYPE html>
@@ -46,24 +52,8 @@
 </header>
 <body>
 <div style="width: 69%; border-right: 1px solid black; display: inline-block">
-    <div style="text-align: center; border: 1px solid black; background-color: black; color: white; height: 39.375%">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        Очень интересное видео
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </div>
+        <iframe height="270px" src="https://www.youtube.com/embed/im-YT43aDwU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="text-align: center; border: 1px solid black; background-color: black; color: white; width: 100%;">
+        </iframe>
     <div style="margin-top: 2px; border-top: 1px solid black;">
         <b>Просмотров: <?php echo getViews()?> </b>
     </div>

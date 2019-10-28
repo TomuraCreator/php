@@ -41,10 +41,10 @@
         </li>
     </ul>
     <ul>
-        <li>Занятие 2.2. Введение в ООП
+        <li>Занятие 2.3. Даты и сессии
             <ul>
-                <li><a href="2.2-OOP/2.2.1/">Модель доступа к файлу</a></li>
-                <li><a href="2.2-OOP/2.2.2/">Модель доступа к данным</a></li>
+                <li><a href="2.3-dates-and-sessions\2.3.1-your-tube">Защита от накрутки</a></li>
+                <li><a href="2.3-dates-and-sessions\2.3.2-brute-protection">Защита от перебора</a></li>
             </ul>
         </li>
     </ul>
