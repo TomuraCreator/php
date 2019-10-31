@@ -4,11 +4,12 @@
     function checkAndSaveImage(array $image) {
         $file = $image['file'];
         for($i=0; $i < count($file['name']); $i++) {
-            if(exif_imagetype($file['tmp_name'][$i])) :
-                move_uploaded_file($file['tmp_name'][$i], "images/{$file['name'][$i]}");
-            else : 
-                return False;    
-            endif;
+            $checkit = $file['name'][$i];
+            if(!empty($checkit)) {
+                if(exif_imagetype($file['tmp_name'][$i])) {
+                    move_uploaded_file($file['tmp_name'][$i], "images/{$file['name'][$i]}");
+                } 
+            }
         }
         return true;
     }
@@ -37,7 +38,8 @@
     <?php function showImage() {
         $path = __DIR__ . "/images";
         if($files = scandir($path, SCANDIR_SORT_NONE)):
-            for($i=2; $i < count($files); $i++) { ?>
+            for($i=2; $i < count($files); $i++) { 
+                ?>
 
             <img src="<?php echo "images/$files[$i]"?>">
 
