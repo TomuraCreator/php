@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ALL & ~E_NOTICE, ~E_WARNING);
+    error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
     /**
      * Функция получает текущее количество просмотров на видео
      *
@@ -33,7 +33,7 @@
         $expire = 300;
         
         $timer = $_COOKIE['timer'];
-        if( !empty($timer)) {
+        if( !empty($timer) )  {
             setcookie('timer', time(), time()+$expire);
         }
 
