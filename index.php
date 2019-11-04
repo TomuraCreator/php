@@ -49,9 +49,17 @@
         </li>
     </ul>
     <ul>
-        <li>Занятие 2.3. Работа с исключениями. Заголовки
+        <li>Занятие 3.1. Работа с исключениями. Заголовки
             <ul>
                 <li><a href="3.1-exceptions-and-headers/3.1.1-router/site.php">Router</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>Занятие 3.2. PHP7. PSR-*. PHPDOC
+            <ul>
+                <li><a href="3.2-PHP7-PSR-PHPDoc/3.2.1/index.php">Недочёт в старом коде</a></li>
+                <li><a href="3.2-PHP7-PSR-PHPDoc/3.2.2/index.php">Поддержка веб-приложения кафе</a></li>              
             </ul>
         </li>
     </ul>
