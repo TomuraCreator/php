@@ -43,8 +43,15 @@
     <ul>
         <li>Занятие 2.3. Даты и сессии
             <ul>
-                <li><a href="2.3-dates-and-sessions\2.3.1-your-tube">Защита от накрутки</a></li>
-                <li><a href="2.3-dates-and-sessions\2.3.2-brute-protection">Защита от перебора</a></li>
+                <li><a href="2.3-dates-and-sessions/2.3.1-your-tube">Защита от накрутки</a></li>
+                <li><a href="2.3-dates-and-sessions/2.3.2-brute-protection/form.html">Защита от перебора</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>Занятие 2.3. Работа с исключениями. Заголовки
+            <ul>
+                <li><a href="3.1-exceptions-and-headers/3.1.1-router/">Router</a></li>
             </ul>
         </li>
     </ul>
