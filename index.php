@@ -51,7 +51,7 @@
     <ul>
         <li>Занятие 2.3. Работа с исключениями. Заголовки
             <ul>
-                <li><a href="3.1-exceptions-and-headers/3.1.1-router/">Router</a></li>
+                <li><a href="3.1-exceptions-and-headers/3.1.1-router/site.php">Router</a></li>
             </ul>
         </li>
     </ul>
