@@ -32,12 +32,11 @@
     {
         $expire = 300;
         
-        $timer = $_COOKIE['timer'];
-        if( !empty($timer) )  {
+        if( !empty($_COOKIE['timer']) )  {
             setcookie('timer', time(), time()+$expire);
         }
 
-        if(( time() - $timer ) > 300) {
+        if(( time() - $_COOKIE['timer']) > 300) {
             setcookie('timer', time(), time()+$expire);
             incrementViews(getViews());
         } 
