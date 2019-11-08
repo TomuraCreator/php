@@ -7,41 +7,30 @@ class Router
         $this->availableLink = $link;
     }
    
-    private function isEmptyString(string $name) : void 
+    private function isEmptyString(string $name) : bool 
     {
         if(empty($name)) {
-            throw new Exception();
-            exit;
+            throw new EmptyDate('Строка пуста');
+        } else {
+            return true;
         }
     }
 
-    private function isArrayValue(string $name) : void
+    private function isArrayValue(string $name) : bool
     {
         $array_pages = $this->availableLink;
 
         if(!in_array($name, $array_pages)) {
-            throw new Exception($name);
-            exit;
+            throw new NotPage($name);
+        } else {
+            return true;
         }
     }
 
     public function isAvailableLink(string $name) : bool
     {
-        try {
-            $this->isEmptyString($name);
-            
-        } catch(Exception $e) {
-            header('Location: errors/error.php?name='. $e->getMessage());
-            exit;
-        }
-        try {
-            $this->isArrayValue($name);
-        } catch(Exception $e) {
-
-            header('Location: errors/404page.php');
-            exit;
-        }
-        return true;
+        if($this->isEmptyString($name) &&  $this->isArrayValue($name) ) {
+            return true;
+        } 
     }
-
 }

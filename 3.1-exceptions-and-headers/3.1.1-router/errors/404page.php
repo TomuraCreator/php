@@ -41,7 +41,7 @@
     <title>404 page</title>
 </head>
 <body>
-    <h1>Страница не найдена так что...</h1>
+    <h1>Страница <?php echo $_GET['name']?> не найдена так что...</h1>
     <a href="../site.php" title="тсс, кому говорю!!!">сюда, только тссс!</a>
     <img src="https://s.tcdn.co/811/63a/81163a9c-cb35-4ee5-b172-edd769329040/7.png" alt="уходи">
 </body>
