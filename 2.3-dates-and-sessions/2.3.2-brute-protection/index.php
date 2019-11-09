@@ -9,7 +9,7 @@ $login = $_POST['login'];
 $password = $_POST['password'];
 
 /**
- * Првоеряет логин и пароль
+ * Проверяет логин и пароль
  * @param string $login логин
  * @param array $arr массив с пользователями
  * @param string $pass пароль
@@ -33,13 +33,11 @@ function checkPass (string $username, array $arr, string $pass) : bool
  * @return bool
  */
 function checkBruteForce() : bool 
-{
-    session_start();
-    $time = $_SESSION['time'];
-    if (!empty($time)) {
+{   
+    if (empty($_SESSION['time'])) { 
         $_SESSION['time'] = time();
     }
-    if (time() - $time <= 20) {
+    if (time() - $_SESSION['time'] <= 20) {
         return true;
     } else {
         return false;
@@ -80,6 +78,7 @@ function clearLogSession () : void
     }
 }
 
+session_start();
 if (checkPass($login, $users, $password)) {
     echo "Добро пожаловать $login";
     clearLogSession(true);
@@ -94,6 +93,5 @@ if (checkPass($login, $users, $password)) {
         }
     }
 }
-
 
 ?>
