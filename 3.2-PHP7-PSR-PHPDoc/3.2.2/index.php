@@ -6,8 +6,8 @@
  * @var array $post
  */
 
-require_once 'const.php';
-require_once 'loadJSON.php';
-require_once 'renderView.php';
+require 'const.php';
+require 'loadJSON.php';
+require 'renderView.php';
 $menu = loadJSON('menu');
 renderView('default', 'main', ['menu' => $menu]);
