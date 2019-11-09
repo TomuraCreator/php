@@ -14,7 +14,6 @@ function getToCount(array $menu, array $post) : string
     $servise = (int)$post['service'];
     
     foreach ($menu as $prop) {
-        var_dump($prop, $post);
         $value = $post[$prop->id];
         if ($value > 0) {
             $quantity = $value * $prop->price;
